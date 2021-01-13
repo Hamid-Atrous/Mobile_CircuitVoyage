@@ -1,11 +1,12 @@
 package com.example.mobilecircuitvoyage;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.ArrayList;
 
 public class GestionCircuit extends AppCompatActivity implements View.OnClickListener{
 
@@ -50,9 +51,14 @@ public class GestionCircuit extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    public void lister(){
-        Intent IntLister = new Intent(GestionCircuit.this, ListerActivity.class);
-        startActivity(IntLister);
+    //FAIT LE CHANGEMENT  D'ACTIVITÉ
+    public void lister()
+    {
+        Intent intent = new Intent(GestionCircuit.this, ListerActivity.class);
+        // SEND TEXT TO ACTIVITY 2
+        intent.putExtra("titre", "Liste de Membres");
+        // SEND
+        startActivity(intent);
     }
 
 }
