@@ -91,7 +91,7 @@ public class ListerActivity extends AppCompatActivity {
 
         final ArrayList<HashMap<String, Object>> tabMembres = new ArrayList<HashMap<String, Object>>();
 
-        String url = "http://10.0.2.2/PROJETS/MobileCircuitVoyage/PHP/livresControleurJSON.php";
+        String url = "http://10.0.2.2/PROJETS/MobileCircuitVoyage/PHP/membreControleurJSON.php";
 
         StringRequest requete = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
