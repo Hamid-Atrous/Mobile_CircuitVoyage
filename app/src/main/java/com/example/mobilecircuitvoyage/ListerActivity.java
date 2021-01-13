@@ -36,16 +36,16 @@ public class ListerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lister);
 
-        initElements();
+        initWidgets();
         getDataFromMainActivity();
         setEvenementButton();
-        //lister();
+        lister();
     }
 
     /**
      *Get all reference widgets
      */
-    private void initElements()
+    private void initWidgets()
     {
         textView = (TextView) findViewById(R.id.txtDisplayContent);
         listeView = (ListView) findViewById(R.id.listeView);
@@ -72,7 +72,6 @@ public class ListerActivity extends AppCompatActivity {
                 startActivity(showTel);
             }
         });*/
-
     }
 
     /*
@@ -107,31 +106,21 @@ public class ListerActivity extends AppCompatActivity {
                             if(msg.equals("OK"))
                             {
                                 JSONObject unMembre;
-                                for(i = 1; i< jsonResponse.length(); i++)
+                                for(i = 1; i < jsonResponse.length(); i++)
                                 {
-                                    unMembre=jsonResponse.getJSONObject(i);
-                                    map= new HashMap<String, Object>();
-                                    j=(i%7);//m0.jpg, ...,m6.jpg round robin
-                                    String nomImage = "m"+j;
-                                   /* byte[] decodedString = Base64.decode(unMembre.getString("image"), Base64.DEFAULT);
-                                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                                    Drawable d = new BitmapDrawable(getResources(),decodedByte);
-                                    map.put("Image", d);
-                                    if (i==3)
-                                        map.put("img", d);
-                                    else*/
-                                    map.put("img", String.valueOf(getResources().getIdentifier(nomImage, "drawable", getPackageName())));
-                                    map.put("idl", unMembre.getString("idlivre"));
-                                    map.put("mtitre", unMembre.getString("titre"));
-                                    map.put("mauteur", unMembre.getString("auteur"));
-                                    map.put("mannee", unMembre.getString("annee"));
-                                    map.put("mpages", unMembre.getString("pages"));
+                                    unMembre = jsonResponse.getJSONObject(i);
+                                    map = new HashMap<String, Object>();
+                                    map.put("idMembre", unMembre.getString("idMembre"));
+                                    map.put("nom", unMembre.getString("nom"));
+                                    map.put("prenom", unMembre.getString("prenom"));
+                                    map.put("courriel", unMembre.getString("courriel"));
+                                    map.put("telephone", unMembre.getString("telephone"));
                                     tabMembres.add(map);
                                 }
 
                                 SimpleAdapter monAdapter = new SimpleAdapter (ListerActivity.this, tabMembres, R.layout.lister_membre_map,
-                                        new String[] {"img", "idl", "mtitre", "mauteur", "mannee", "mpages"},
-                                        new int[] {R.id.img, R.id.idl, R.id.mtitre, R.id.mauteur, R.id.mannee, R.id.mpages});
+                                        new String[] { "idMembre", "nom", "prenom", "courriel", "telephone"},
+                                        new int[] {R.id.idMembre, R.id.nom, R.id.prenom, R.id.courriel, R.id.telephone});
                                 listeView.setAdapter(monAdapter);
                             }
                             else{}

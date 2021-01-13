@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:ignore="MissingClass">
 
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:padding="10px"
-        android:maxWidth="24px"
-        android:maxHeight="24px"
-        />
+<!--    <ImageView-->
+<!--        android:id="@+id/img"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:padding="10px"-->
+<!--        android:maxWidth="24px"-->
+<!--        android:maxHeight="24px"-->
+<!--        />-->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="fill_parent"
@@ -23,32 +23,32 @@
         android:paddingLeft="10px"
         android:layout_weight="1"
         >
-        <TextView android:id="@+id/idl"
+        <TextView android:id="@+id/idMembre"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textSize="18sp"
             android:paddingLeft="50px"
             />
-        <TextView android:id="@+id/mtitre"
+        <TextView android:id="@+id/nom"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textSize="18sp"
             android:textStyle="bold"
             android:paddingLeft="50px"
             />
-        <TextView android:id="@+id/mauteur"
+        <TextView android:id="@+id/prenom"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textSize="18sp"
             android:paddingLeft="50px"
             />
-        <TextView android:id="@+id/mannee"
+        <TextView android:id="@+id/courriel"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textSize="18sp"
             android:paddingLeft="50px"
             />
-        <TextView android:id="@+id/mpages"
+        <TextView android:id="@+id/telephone"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:textSize="18sp"
