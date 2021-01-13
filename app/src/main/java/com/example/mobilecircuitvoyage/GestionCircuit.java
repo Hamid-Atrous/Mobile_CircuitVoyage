@@ -6,12 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.ArrayList;
-
 public class GestionCircuit extends AppCompatActivity implements View.OnClickListener{
 
     Button blister;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +17,9 @@ public class GestionCircuit extends AppCompatActivity implements View.OnClickLis
         ajouterEvents();
     }
 
+    /*
+    * Add on click button Lister
+    */
     public void ajouterEvents()
    {
        blister = (Button) findViewById(R.id.blister);
@@ -51,7 +51,9 @@ public class GestionCircuit extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    //FAIT LE CHANGEMENT  D'ACTIVITÉ
+    /*
+    * FAIT APPEL À UNE AUTRE ACTIVITÉ
+    */
     public void lister()
     {
         Intent intent = new Intent(GestionCircuit.this, ListerActivity.class);

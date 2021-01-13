@@ -20,8 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:text="Lister"
-            android:textSize="18sp"
-            app:backgroundTint="#4CAF50" />
+            android:textSize="24sp"
+            android:backgroundTint="#4CAF50"
+            />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

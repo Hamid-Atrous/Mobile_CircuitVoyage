@@ -14,13 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:paddingTop="80dp"
             android:text="Data from Activity 2"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="22sp" />
 
         <ListView
-            android:id="@+id/liste"
+            android:id="@+id/listeView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -31,6 +30,7 @@
             android:id="@+id/btnRetourner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
             android:text="Retour"
             android:textSize="24sp" />
 
