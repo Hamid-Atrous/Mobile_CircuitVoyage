@@ -63,15 +63,6 @@ public class ListerActivity extends AppCompatActivity {
                 ListerActivity.this.finish();//Sans retour de données
             }
         });
-/*        Button btnSnackbar = (Button)findViewById(R.id.btnSnackbar);
-        btnSnackbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "content here", Snackbar.LENGTH_LONG).setAction("action", null).show();
-                Intent showTel = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:(514) 546 0521"));
-                startActivity(showTel);
-            }
-        });*/
     }
 
     /*
@@ -110,6 +101,7 @@ public class ListerActivity extends AppCompatActivity {
                                 {
                                     unMembre = jsonResponse.getJSONObject(i);
                                     map = new HashMap<String, Object>();
+                                    map.put("img", String.valueOf(getResources().getIdentifier("avatar", "drawable", getPackageName())));
                                     map.put("idMembre", unMembre.getString("idMembre"));
                                     map.put("nom", unMembre.getString("nom"));
                                     map.put("prenom", unMembre.getString("prenom"));
@@ -119,8 +111,8 @@ public class ListerActivity extends AppCompatActivity {
                                 }
 
                                 SimpleAdapter monAdapter = new SimpleAdapter (ListerActivity.this, tabMembres, R.layout.lister_membre_map,
-                                        new String[] { "idMembre", "nom", "prenom", "courriel", "telephone"},
-                                        new int[] {R.id.idMembre, R.id.nom, R.id.prenom, R.id.courriel, R.id.telephone});
+                                        new String[] {"img", "idMembre", "nom", "prenom", "courriel", "telephone"},
+                                        new int[] {R.id.img,R.id.idMembre, R.id.nom, R.id.prenom, R.id.courriel, R.id.telephone});
                                 listeView.setAdapter(monAdapter);
                             }
                             else{}

@@ -1,10 +1,11 @@
 package com.example.mobilecircuitvoyage;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GestionCircuit extends AppCompatActivity implements View.OnClickListener{
 
@@ -24,12 +25,6 @@ public class GestionCircuit extends AppCompatActivity implements View.OnClickLis
    {
        blister = (Button) findViewById(R.id.blister);
        blister.setOnClickListener(this);
-//        benreg = (Button) findViewById(R.id.benreg);
-//        benreg.setOnClickListener(this);
-//        bmodifier = (Button) findViewById(R.id.bmodifier);
-//        bmodifier.setOnClickListener(this);
-//        benlever = (Button) findViewById(R.id.benlever);
-//        benlever.setOnClickListener(this);
     }
 
     public void onClick(View v)
@@ -39,15 +34,6 @@ public class GestionCircuit extends AppCompatActivity implements View.OnClickLis
             case R.id.blister:
                 lister();
                 break;
-//            case R.id.benreg:
-//                enregistrer();
-//                break;
-//            case R.id.bmodifier:
-//                modifier();
-//                break;
-//            case R.id.benlever:
-//                enlever();
-//                break;
         }
     }
 
