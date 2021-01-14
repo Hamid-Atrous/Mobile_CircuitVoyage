@@ -111,8 +111,8 @@ public class ListerActivity extends AppCompatActivity {
                                 }
 
                                 SimpleAdapter monAdapter = new SimpleAdapter (ListerActivity.this, tabMembres, R.layout.lister_membre_map,
-                                        new String[] {"img", "idMembre", "nom", "prenom", "courriel", "telephone"},
-                                        new int[] {R.id.img,R.id.idMembre, R.id.nom, R.id.prenom, R.id.courriel, R.id.telephone});
+                                        new String[] {"img", "nom", "prenom", "courriel", "telephone"},
+                                        new int[] {R.id.img, R.id.nom, R.id.prenom, R.id.courriel, R.id.telephone});
                                 listeView.setAdapter(monAdapter);
                             }
                             else{}
